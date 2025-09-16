@@ -1,0 +1,188 @@
+/* --- Citrus Burst Colors --- */
+:root {
+    --primary-orange: #FF9800;
+    --secondary-yellow: #FFC107;
+    --light-bg: #F5F5DC;
+    --dark-text: #333333;
+    --accent-lime: #C0E816;
+}
+
+/* --- Basic Styles and Typography --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+}
+
+h1, h2, h3 {
+    color: var(--primary-orange);
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-text);
+}
+
+/* --- Navbar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--secondary-yellow);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--dark-text);
+}
+
+.nav-links a {
+    margin-left: 1.5rem;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-orange);
+}
+
+.hamburger-menu {
+    display: none; /* Hidden on desktop */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    height: 3px;
+    width: 25px;
+    background-color: var(--dark-text);
+    margin-bottom: 4px;
+    border-radius: 5px;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(231, 230, 230, 0.6), rgba(255, 255, 255, 0.6)), url("images/Gemini_Generated_Image_uf0e0ruf0e0ruf0e.png") center/cover no-repeat;
+    background-blend-mode: luminosity;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: rgb(19, 19, 18);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: var(--accent-lime);
+    color: var(--dark-text);
+    border-radius: 50px;
+    font-weight: 700;
+    transition: transform 0.3s;
+    margin-top: 1rem;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+}
+
+/* --- Sections --- */
+section {
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.menu-section, .about-section, .contact-section {
+    background-color: var(--light-bg);
+}
+
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.menu-item {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+}
+.menu-item-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: auto;
+    object-fit:cover;
+    display: block;
+    
+}
+.menu-item img {
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--dark-text);
+    color: var(--light-bg);
+}
+
+/* --- Responsive Design (for mobile) --- */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--secondary-yellow);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 1rem 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .menu-items {
+        flex-direction: column;
+        align-items: center;
+    }
+}
